@@ -1,0 +1,118 @@
+{
+  "id": "b596bb7d-0202-46e2-b7c2-fc3b333f717c",
+  "name": "Employee-Asset-Tracking-Module",
+  "publisher": "Default Publisher",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [
+     {
+      "name": "India GST",
+      "id": "db643212-b7fb-4dd4-b5a8-cb44ac714461",
+      "publisher": "Microsoft",
+      "version": "25.2.27733.28023"
+    },
+    {
+      "name": "India Tax Base",
+      "id": "d3c551dd-5903-4194-b153-04ced9d29a2c",
+      "publisher": "Microsoft",
+      "version": "25.2.27733.28209"
+    },
+    {
+      "name": "QR Generator",
+      "id": "7106d701-c601-4a5f-97c2-b8b323ae2c18",
+      "publisher": "Microsoft",
+      "version": "25.2.27733.28023"
+    },
+    {
+      "name": "India TCS",
+      "id": "eddcf82e-482c-49d1-836b-ad0284f2c5b0",
+      "publisher": "Microsoft",
+      "version": "25.2.27733.28023"
+    },
+    {
+      "name": "India TDS",
+      "id": "eae5779e-7797-4c4c-977e-7516652b7a65",
+      "publisher": "Microsoft",
+      "version": "25.2.27733.28209"
+    },
+    {
+      "name": "Tax Engine",
+      "version": "25.2.27733.28023",
+      "publisher": "Microsoft",
+      "id": "c1eafb3f-e397-468e-bdb4-ecc5c317ca00"
+    },
+  {
+    "name": "Fixed Asset Depreciation for India",
+    "id": "1150dd8d-51da-485a-bd4a-1ee98d78c21a",
+    "publisher": "Microsoft",
+    "version": "25.2.27733.28023"
+  },
+  {
+    "name": "India Gate Entry",
+    "id": "2dc39818-e0f0-42b6-99eb-ba29dc5f4102",
+    "publisher": "Microsoft",
+    "version": "25.2.27733.28023"
+  },
+  {
+    "name": "India Reports",
+    "id": "050f6146-bffd-40de-942c-d0dd510ec20f",
+    "publisher": "Microsoft",
+    "version": "25.2.27733.28023"
+  },
+  {
+    "name": "India Voucher Interface",
+    "id": "f1d9b696-156b-4251-b542-34e549fa80e9",
+    "publisher": "Microsoft",
+    "version": "25.2.27733.28023"
+  },
+  {
+    "name": "System Application",
+    "id": "63ca2fa4-4f03-4f2b-a480-172fef340d3f",
+    "publisher": "Microsoft",
+    "version": "25.2.27733.28023"
+  },
+  {
+    "id": "e1d97edc-c239-46b4-8d84-6368bdf67c8b",
+    "publisher": "Microsoft",
+    "name": "E-Document Core",
+    "version": "25.2.27733.28023"
+  },
+  {
+      "id": "07729019-DA51-4639-A987-3DB38CCC62C7",
+      "name": "India Charge Group",
+      "publisher": "Microsoft",
+      "version": "25.2.27733.28023"
+  },
+  {
+    "id": "93a71c5e-237e-47e8-835b-1a7f9e844f1b",
+    "name": "Create Product Information With Copilot",
+    "publisher": "Microsoft",
+    "version": "25.0.23364.24599"
+  }
+  ],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "26.0.0.0",
+  "idRanges": [
+    {
+      "from": 50100,
+      "to": 99999
+    }
+  ],
+  
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "15.2",
+  "features": [
+    "NoImplicitWith"
+  ]
+}
