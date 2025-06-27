@@ -19,17 +19,17 @@ table 50101 "Asset Table"
         {
             DataClassification = ToBeClassified;
             Caption = 'Asset Name';
-            OptimizeForTextSearch = true;
         }
         field(3; "Asset Type"; Option)
         {
             DataClassification = ToBeClassified;
+            Caption = 'Asset Type';
             OptionMembers = "0","1","2","3","4","5";
             OptionCaption = ' ,Laptop,Phone,Access Card,Chair,Others';
         }
         field(4; "Purchase Date"; Date)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = SystemMetadata;
             Caption = 'Purchase Date';
         }
         field(5; "Asset Status"; Option)
@@ -37,6 +37,7 @@ table 50101 "Asset Table"
             DataClassification = ToBeClassified;
             OptionMembers = "0","1","2","3","4","5";
             OptionCaption = ' ,Available,Assigned,Under Maintenance,Lost';
+            Caption = 'Asset Status';
         }
     }
 

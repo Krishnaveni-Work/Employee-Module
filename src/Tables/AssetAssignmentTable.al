@@ -21,7 +21,6 @@ table 50103 "Asset Assignment Table"
             DataClassification = ToBeClassified;
             Caption = 'Employee ID';
             NotBlank = true;
-            OptimizeForTextSearch = true;
             TableRelation = "Employee Table"."Employee ID";
         }
         field(3; "Asset ID"; Code[10])
@@ -29,14 +28,13 @@ table 50103 "Asset Assignment Table"
             DataClassification = ToBeClassified;
             Caption = 'Asset ID';
             NotBlank = true;
-            OptimizeForTextSearch = true;
             TableRelation = "Asset Table"."Asset ID";
         }
         field(4; "Assignment date"; Date)
         {
             DataClassification = ToBeClassified;
             Caption = 'Assignment date';
-
+            NotBlank = true;
         }
         field(5; "Return Date"; Date)
         {
@@ -51,8 +49,8 @@ table 50103 "Asset Assignment Table"
         field(7; "Status"; Option)
         {
             DataClassification = ToBeClassified;
-            OptionMembers = "0","1","2";
-            OptionCaption = ' ,Assigned,Returned';
+            OptionMembers = "0","1","2","3";
+            OptionCaption = ' ,Available,Assigned,Returned';
             Caption = 'Status';
         }
     }
@@ -62,6 +60,10 @@ table 50103 "Asset Assignment Table"
         key(PK; "Entry No.")
         {
             Clustered = true;
+        }
+        key("Asset Filter"; "Asset ID", "Status")
+        {
+
         }
     }
 
@@ -74,9 +76,20 @@ table 50103 "Asset Assignment Table"
         myInt: Integer;
 
     trigger OnInsert()
-    begin
 
+    var
+        AssetRec: Record "Asset Table";
+
+    begin
+        AssetRec.Get("Asset ID");
+        AssetRec."Asset Status" := AssetRec."Asset Status"::"0";
+        Error('Asset %1 is not available for assignment.', "Asset ID");
+        AssetRec.Modify();
     end;
+
+
+
+
 
     trigger OnModify()
     begin
