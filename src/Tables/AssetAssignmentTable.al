@@ -50,8 +50,8 @@ table 50103 "Asset Assignment Table"
         field(7; "Status"; Option)
         {
             DataClassification = ToBeClassified;
-            OptionMembers = "0","1","2","3";
-            OptionCaption = ' ,Available,Assigned,Returned';
+            OptionMembers = "0","1","2","3","4","5";
+            OptionCaption = ' ,Available,Assigned,Returned,"Under Maintainence", Lost';
             Caption = 'Status';
         }
     }

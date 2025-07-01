@@ -21,9 +21,9 @@ page 50100 "Employee List Page"
                     ApplicationArea = all;
                     NotBlank = true;
                     Caption = 'Employee ID';
-                    Editable= false;
-                    
-                    
+                    Editable = false;
+
+
                 }
                 field("First Name"; Rec."First Name")
                 {
@@ -44,7 +44,7 @@ page 50100 "Employee List Page"
                 {
                     ApplicationArea = all;
                     Caption = 'Full Name';
-                    Editable=false;
+                    Editable = false;
                 }
                 field(Gender; Rec.Gender)
                 {
@@ -64,11 +64,15 @@ page 50100 "Employee List Page"
                 {
                     ApplicationArea = all;
                     Caption = 'Department';
+
                 }
+
+
                 field("Department Description"; Rec."Department Description")
                 {
                     ApplicationArea = all;
                     Caption = 'Department Description';
+
                 }
                 field(Country; Rec.Country)
                 {

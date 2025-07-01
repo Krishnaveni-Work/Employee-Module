@@ -71,17 +71,22 @@ table 50100 "Employee Table"
             OptionMembers = "0","1","2";
             OptionCaption = 'Active,Inactive,On Leave';
         }
-        field(9; "Department"; Code[10])
+        field(9; "Department"; Option)
         {
             DataClassification = ToBeClassified;
             Caption = 'Department';
+
+            OptionMembers = "Blank","IT","Finance","SAP","SCM","Marketing","Accounting","HR","ERP","Admin";
+            OptionCaption = ' , IT, Finance, SAP, SCM, Marketing, Accounting, HR, ERP, Admin';
         }
-        field(10; "Department Description"; Text[50])
+        field(10; "Department Description"; Text[200])
         {
+
             DataClassification = ToBeClassified;
             Caption = 'Describe your Department';
             NotBlank = true;
             ToolTip = 'This field is mandatory and should not be left blank.';
+            Editable = false;
         }
         field(11; "Country"; Option)
         {
@@ -181,6 +186,32 @@ table 50100 "Employee Table"
 
         }
 
+        field(19; "Experience"; DateFormula)
+        {
+            DataClassification = ToBeClassified;
+            Caption = 'Experience';
+
+            trigger OnValidate()
+            var
+                ResultDate: Date;
+            begin
+                if ("Experience" <> '') and ("Date Of Joining" 0D)
+                then begin
+                    ResultDate := CalcDate("Experience", "Date Of Joining");
+                    "Experience Period" := CalcAge(ResultDate, "Date Of Joining");
+                end else
+                "Experience Period" := 0;
+
+            end;
+
+        }
+
+        field(20; "Experience Period"; Integer)
+        {
+            DataClassification = ToBeClassified;
+            Caption = 'Experience (days)';
+            Editable = false;
+        }
     }
 
     Keys
@@ -188,7 +219,7 @@ table 50100 "Employee Table"
         key(PK; "Employee ID")
         {
             Clustered = true;
-            
+
         }
     }
 
@@ -222,6 +253,9 @@ table 50100 "Employee Table"
             "Created On" := CurrentDateTime();
     end;
 
+
+
+
     procedure FullNameMethod()
     begin
         "Full Name" := "First Name";
@@ -229,6 +263,11 @@ table 50100 "Employee Table"
             "Full Name" := "Full Name" + ' ' + "Middle Name";
         if "Last Name" <> '' then
             "Full Name" := "Full Name" + ' ' + "Last Name";
+    end;
+
+    local procedure CalcAge(NewDate: Date; StartDate: Date): Integer
+    begin
+        exit(NewDate - StartDate); // Returns experience in days
     end;
 
 }

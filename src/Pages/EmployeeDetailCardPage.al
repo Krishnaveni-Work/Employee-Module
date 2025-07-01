@@ -20,7 +20,7 @@ page 50101 "Employee Card Page"
                     NotBlank = true;
                     Caption = 'Employee ID';
                     Editable = false;
-                    
+
                 }
                 field("First Name"; Rec."First Name")
                 {
@@ -61,11 +61,13 @@ page 50101 "Employee Card Page"
                 {
                     ApplicationArea = all;
                     Caption = 'Department';
+
                 }
                 field("Department Description"; Rec."Department Description")
                 {
                     ApplicationArea = all;
                     Caption = 'Department Description';
+                    TableRelation = Department."Description";
                 }
                 field(Country; Rec.Country)
                 {
