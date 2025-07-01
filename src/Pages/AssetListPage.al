@@ -21,6 +21,7 @@ page 50102 "Asset List Page"
                     ApplicationArea = all;
                     NotBlank = true;
                     Caption = 'Asset ID';
+                    
                 }
                 field("Asset Name"; rec."Asset Name")
                 {

@@ -5,14 +5,16 @@ table 50100 "Employee Table"
     Extensible = true;
     DataPerCompany = true;
 
+
     fields
     {
-        field(1; "Employee ID"; Code[10])
+        field(1; "Employee ID"; Integer)
         {
+            AutoIncrement = true;
             DataClassification = ToBeClassified;
             Caption = 'Employee ID';
-            OptimizeForTextSearch = true;
             NotBlank = true;
+            Editable = false;
         }
 
         field(2; "First Name"; Text[20])
@@ -48,6 +50,7 @@ table 50100 "Employee Table"
         {
             DataClassification = ToBeClassified;
             Caption = 'Full Name';
+            Editable = false;
 
         }
         field(6; "Gender"; Option)
@@ -185,6 +188,7 @@ table 50100 "Employee Table"
         key(PK; "Employee ID")
         {
             Clustered = true;
+            
         }
     }
 

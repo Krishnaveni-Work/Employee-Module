@@ -21,6 +21,7 @@ page 50104 "Asset Assignment List Page"
                     ApplicationArea = all;
                     NotBlank = true;
                     Caption = 'Entry No.';
+                    
                 }
                 field("Employee ID"; Rec."Employee ID")
                 {

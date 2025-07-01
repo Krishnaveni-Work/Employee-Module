@@ -20,6 +20,7 @@ page 50105 "Asset Assignment Card Page"
                     ApplicationArea = all;
                     NotBlank = true;
                     Caption = 'Entry No.';
+
                 }
                 field("Employee ID"; Rec."Employee ID")
                 {
@@ -74,20 +75,5 @@ page 50105 "Asset Assignment Card Page"
         }
     }
 
-    trigger OnOpenPage()
-    begin
-        Message('Welcome to the Asset Assignment Card Page!');
-        Message('You can view and manage asset assignments here.');
-        message('Please ensure all fields are filled out correctly before saving.');
-        Message('Thank you for using the Asset Assignment Card Page!');
-        Message('If you have any questions, please contact your system administrator.');
-        Message('This page is designed to help you track asset assignments efficiently.');
-        Message('Remember to check the status of each asset assignment regularly.');
-        Message('You can use the search functionality to find specific asset assignments quickly.');
-    end;
 
-    var
-        AssetAssignmentRec: Record "Asset Assignment Table";
-        EmployeeRec: Record "Employee Table";
-        AssetRec: Record "Asset Table";
 }

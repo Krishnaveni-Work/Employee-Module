@@ -14,6 +14,7 @@ table 50103 "Asset Assignment Table"
             Caption = 'Entry No.';
             NotBlank = true;
             AutoIncrement = true;
+            Editable = false;
 
         }
         field(2; "Employee ID"; Code[10])
@@ -75,17 +76,17 @@ table 50103 "Asset Assignment Table"
     var
         myInt: Integer;
 
-    trigger OnInsert()
+    // trigger OnInsert()
 
-    var
-        AssetRec: Record "Asset Table";
+    // var
+    //     AssetRec: Record "Asset Table";
 
-    begin
-        AssetRec.Get("Asset ID");
-        AssetRec."Asset Status" := AssetRec."Asset Status"::"0";
-        Error('Asset %1 is not available for assignment.', "Asset ID");
-        AssetRec.Modify();
-    end;
+    // begin
+    //     AssetRec.Get("Asset ID");
+    //     AssetRec."Asset Status" := AssetRec."Asset Status"::"0";
+    //     Error('Asset %1 is not available for assignment.', "Asset ID");
+    //     AssetRec.Modify();
+    // end;
 
 
 

@@ -19,7 +19,8 @@ page 50103 "Asset Card Page"
                 {
                     ApplicationArea = all;
                     NotBlank = true;
-                    Caption = 'asset ID';
+                    Caption = 'Asset ID';
+                    
                 }
                 field("Asset Name"; rec."Asset Name")
                 {

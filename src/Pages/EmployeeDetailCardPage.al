@@ -19,6 +19,8 @@ page 50101 "Employee Card Page"
                     ApplicationArea = All;
                     NotBlank = true;
                     Caption = 'Employee ID';
+                    Editable = false;
+                    
                 }
                 field("First Name"; Rec."First Name")
                 {
@@ -39,6 +41,7 @@ page 50101 "Employee Card Page"
                 {
                     ApplicationArea = all;
                     Caption = 'Full Name';
+                    Editable = false;
                 }
                 field(Gender; Rec.Gender)
                 {

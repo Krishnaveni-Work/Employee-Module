@@ -21,6 +21,9 @@ page 50100 "Employee List Page"
                     ApplicationArea = all;
                     NotBlank = true;
                     Caption = 'Employee ID';
+                    Editable= false;
+                    
+                    
                 }
                 field("First Name"; Rec."First Name")
                 {
@@ -41,6 +44,7 @@ page 50100 "Employee List Page"
                 {
                     ApplicationArea = all;
                     Caption = 'Full Name';
+                    Editable=false;
                 }
                 field(Gender; Rec.Gender)
                 {
@@ -71,17 +75,17 @@ page 50100 "Employee List Page"
                     ApplicationArea = all;
                     Caption = 'Country';
                 }
-                // field("Monthly Salary"; Rec."Monthly Salary")
-                // {
-                //     ApplicationArea =;
-                //     Caption = 'Monthly Salary';
+                field("Monthly Salary"; Rec."Monthly Salary")
+                {
+                    ApplicationArea =;
+                    Caption = 'Monthly Salary';
 
-                // }
-                // field("Yearly Salary"; Rec."Yearly Salary")
-                // {
-                //     ApplicationArea = all;
-                //     Caption = 'Yearly Salary';
-                // }
+                }
+                field("Yearly Salary"; Rec."Yearly Salary")
+                {
+                    ApplicationArea = all;
+                    Caption = 'Yearly Salary';
+                }
                 field("Mobile No."; Rec."Mobile No.")
                 {
                     ApplicationArea = all;

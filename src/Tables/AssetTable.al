@@ -8,12 +8,13 @@ table 50101 "Asset Table"
 
     fields
     {
-        field(1; "Asset ID"; code[10])
+        field(1; "Asset ID"; Integer)
         {
             DataClassification = ToBeClassified;
             Caption = 'Asset ID';
             NotBlank = true;
-            OptimizeForTextSearch = true;
+            AutoIncrement = true;
+            Editable = false;
         }
         field(2; "Asset Name"; Text[30])
         {
