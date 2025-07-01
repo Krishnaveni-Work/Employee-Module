@@ -2,7 +2,7 @@ page 50105 "Asset Assignment Card Page"
 {
     PageType = Card;
     ApplicationArea = All;
-    UsageCategory = Documents;
+    UsageCategory = None;
     SourceTable = "Asset Assignment Table";
     Caption = 'Asset Assignment Card';
     CardPageId = "Asset Assignment List Page";
