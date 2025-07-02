@@ -21,7 +21,7 @@ page 50100 "Employee List Page"
                     ApplicationArea = all;
                     NotBlank = true;
                     Caption = 'Employee ID';
-                    Editable = false;
+                    Editable = true;
 
 
                 }
@@ -116,6 +116,9 @@ page 50100 "Employee List Page"
                     ApplicationArea = all;
                     Caption = 'Created On';
                 }
+
+
+                
 
             }
         }

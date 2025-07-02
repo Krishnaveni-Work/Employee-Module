@@ -19,7 +19,7 @@ page 50101 "Employee Card Page"
                     ApplicationArea = All;
                     NotBlank = true;
                     Caption = 'Employee ID';
-                    Editable = false;
+                    Editable = true;
 
                 }
                 field("First Name"; Rec."First Name")
@@ -67,7 +67,7 @@ page 50101 "Employee Card Page"
                 {
                     ApplicationArea = all;
                     Caption = 'Department Description';
-                    TableRelation = Department."Description";
+
                 }
                 field(Country; Rec.Country)
                 {

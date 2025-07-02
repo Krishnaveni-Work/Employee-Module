@@ -14,7 +14,7 @@ table 50100 "Employee Table"
             DataClassification = ToBeClassified;
             Caption = 'Employee ID';
             NotBlank = true;
-            Editable = false;
+            Editable = true;
         }
 
         field(2; "First Name"; Text[20])
@@ -191,18 +191,18 @@ table 50100 "Employee Table"
             DataClassification = ToBeClassified;
             Caption = 'Experience';
 
-            trigger OnValidate()
-            var
-                ResultDate: Date;
-            begin
-                if ("Experience" <> '') and ("Date Of Joining" 0D)
-                then begin
-                    ResultDate := CalcDate("Experience", "Date Of Joining");
-                    "Experience Period" := CalcAge(ResultDate, "Date Of Joining");
-                end else
-                "Experience Period" := 0;
+            // trigger OnValidate()
+            // var
+            //     ResultDate: Date;
+            // begin
+            //     if ("Experience" <> '') and ("Date Of Joining" 0D)
+            //     then begin
+            //         ResultDate := CalcDate("Experience", "Date Of Joining");
+            //         "Experience Period" := CalcAge(ResultDate, "Date Of Joining");
+            //     end else
+            //     "Experience Period" := 0;
 
-            end;
+            // end;
 
         }
 

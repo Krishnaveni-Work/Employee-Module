@@ -14,7 +14,7 @@ table 50101 "Asset Table"
             Caption = 'Asset ID';
             NotBlank = true;
             AutoIncrement = true;
-            Editable = false;
+            Editable = true;
         }
         field(2; "Asset Name"; Text[30])
         {
